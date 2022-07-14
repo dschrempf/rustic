@@ -662,8 +662,8 @@ The documentation is built if necessary."
   (interactive)
   (if (y-or-n-p "Open docs for dependencies as well?")
       ;; open docs only works with synchronous process
-      (shell-command (list (rustic-cargo-bin) "doc --open"))
-    (shell-command (list (rustic-cargo-bin) "doc --open --no-deps"))))
+      (shell-command (concat (rustic-cargo-bin) " doc --open"))
+    (shell-command (concat (rustic-cargo-bin) " doc --open --no-deps"))))
 
 ;;; cargo edit
 
